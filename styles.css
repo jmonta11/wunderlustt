@@ -1,0 +1,822 @@
+/*Jeannette Montano*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Molle */
+@import url('https://fonts.googleapis.com/css2?family=Molle&display=swap');
+
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* Base Styles */
+body {
+    margin: 0px;
+}
+nav li {
+    list-style-type: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav h2 {
+    display: none;
+}
+
+h1, h2, h3 {
+    font-family: 'Molle', cursive;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2, h3 {
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+h4, p, q, small, nav, button, form {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background: linear-gradient(180deg, rgba(0,212,255,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+/* Mobile Device Styles - starting at 500px */
+@media screen and (min-width: 500px) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    h1, header p {
+        padding-left: 30px;
+        padding-right: 30px;
+        grid-column: 1 / 3;
+        margin: 10px;
+    }
+
+    header p {
+        line-height: 1.5rem;
+        font-size: 20px;
+    }
+    
+    nav {
+        margin-top: 40px;
+        grid-column: 2 / 3;
+        grid-row: 1 / 1;
+        overflow: hidden;
+        max-height: 0;
+        transition:  .5s ease-out;
+    }
+
+    nav ul {
+        padding-left: 0px;
+        margin-top: 35px;
+    }
+
+    header > a {
+        grid-column: 2 / 3;
+        grid-row: 1 / 1;
+        text-align: center;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        color: black;
+        padding: 20px 40px;
+        background-color: #F6D64A;
+        margin-top: 20px;
+        height: 15px;
+    }
+
+    .menu-toggle, .menu {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        justify-content: center;
+        border: none;
+        grid-column: 2 / 3;
+        grid-row: 1 / 1;
+        order: 1;
+        position: absolute;
+        right: 0;
+        margin-top: 30px;
+        
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .active {
+        background-color: #F6D64A;
+            color: rgb(0, 0, 0);
+    }
+
+    .menu-toggle:checked ~ nav li {
+        max-height: 100%;
+    }
+    
+    nav li {
+        background-color: #55BCD5;
+        padding: 20px;
+        border-bottom: 1px solid black;
+        font-weight: bold;
+        order: 2;
+        transition: all .2s ease-out;
+    }
+
+    nav a {
+
+        color: black;
+        font-weight: bold;
+        padding: 20px;
+    }
+    
+
+    article h2 {
+        padding-right: 40px;
+        padding-left: 40px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    article p {
+        padding-right: 40px;
+        padding-left: 40px;
+        padding-bottom: 10px;
+        line-height: 2rem;
+    }
+
+    article > img {
+        width: 100vw;
+        padding-bottom: 10px;
+    }
+
+    .lastIslandImage {
+        object-fit: cover;
+        height: 406.98px;
+    }
+
+    .planTrip {
+        background-color: #F6D64A;
+        padding: 40px;
+    }
+    /* SVG color separations-----*/
+    .planTrip > section{
+        background-color: #55BCD5;
+
+    }
+    .testimonials > section {
+        background-color: #499BD2;
+    }
+    /* END SVG color separations-----*/
+
+    .planTrip section {
+        padding-top: 40px;
+        padding-right: 20px;
+        padding-left: 20px;
+        border: 4px solid white;
+        border-radius: 15px;
+        margin-bottom: 10px;
+    }
+
+    .planTrip section h4 {
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .planTrip section svg {
+        filter: invert(100%) sepia(98%) saturate(9%) hue-rotate(166deg) brightness(200%) contrast(104%);
+        margin: 0 auto;
+        display: block;
+    }
+
+    polyline, .icon-tabler-chevron-right {
+        display: none;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+        padding: 40px;
+    }
+
+    .testimonials section {
+        background-color: white;
+        text-align: center;
+        padding-right: 80px;
+        padding-left: 80px;
+        padding-bottom: 20px;
+    }
+    
+    .testimonials section img {
+        margin-bottom: 10px;
+    }
+
+    .testimonials section h4 {
+        text-transform: uppercase;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    q {
+        quotes: "“" "”" "‘" "’";
+        font-style: italic;
+    }
+
+    q::before {
+        content: open-quote;
+    }
+
+    q::after {
+        content: close-quote;
+    }
+
+    /* Destinations Section */
+    .destinations {
+        padding: 40px;
+        background-color: #499BD2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    
+    .destinations h3 {
+        grid-column: 1 / 3;
+    }
+
+    .destinations section {
+        text-align: center;
+    }
+
+    .destinations section h4 {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .destinations section .ruler {
+        grid-column: 1 / 2;
+        grid-row: 2 / 2;
+    }
+
+    .destinations section svg {
+        filter: invert(100%) sepia(98%) saturate(9%) hue-rotate(166deg) brightness(200%) contrast(104%);
+    }
+
+    /* Contact Form--------------- */
+    .contact {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        padding: 40px;
+    }
+
+    .contact p {
+        padding: 0px;
+        font-style: italic;
+        font-size: 18px;;
+    }
+
+    .contact p span {
+        color: #9B26B0;
+    }
+
+    .contact h3 {
+        padding: 0;
+    }
+
+    .contact form {
+        grid-column: 1 / 3;
+    }
+
+    .contact form input, .contact form label{
+        display: block;
+    }
+
+    .contact form input {
+        border: 2px solid #9B26B0;
+        width: 100%;
+        height: 50px;
+        margin-top: 5px;
+    }
+
+    .contact form input[placeholder] {
+        font-size: 20px;
+        padding-left: 10px;
+    }
+
+    .contact form legend {
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .contact form label {
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 20px;
+    }
+
+    input[type="radio"] {
+        margin: 10px;
+        color: #9B26B0;
+        accent-color: #9B26B0;
+    }
+
+    .contact form fieldset {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        width: 100%;
+    }
+
+    .contact form fieldset label {
+        font-weight: 100;
+        text-transform: none;
+        display: inline;
+        margin-left: 20px;
+    }
+
+    fieldset {
+        margin-top: 20px;
+    }
+
+    .contact form span {
+        font-size: 20px;
+        color: #9B26B0;
+    }
+
+    .contact form #destination, .contact form #travelTime {
+        width: 100%;
+        height: 50px;
+        border: 2px solid #9B26B0;
+        margin-top: 5px;
+        font-size: 20px;
+        padding-left: 10px;
+    }
+
+    .contact form input[type="submit"] {
+        background-color: #9B26B0;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 20px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Footer Section */
+    footer {
+        background-color: #EAEAEA;
+        padding: 40px;
+        text-align: center;
+    }
+
+    footer p {
+        margin-bottom: 40px;
+        font-size: 20px;
+    }
+
+    footer a {
+        text-decoration: none;
+        color: black;
+        display: block;
+        margin-bottom: 40px;
+        font-size: 18px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    footer .lastFooterLink {
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (min-width: 850px) {
+
+    /* Header Section */
+    header {
+        display: grid;
+        grid-template-columns: 230px 1fr;
+        grid-template-rows: repeat(200px);
+        padding-top: 20px;
+    }
+
+    header h1 {
+        grid-column: 2 / 3;
+        text-align: left;
+    }
+
+    header p {
+        grid-column: 2 / 3;
+    }
+
+    header > img {
+        grid-row: 1 / 3;
+        grid-column: 1 / 1;
+    }
+
+    header > nav {
+        all: revert;
+        grid-column: 1 / 3;
+        padding: 0px 40px;
+    }
+
+    header nav ul {
+        margin: 0;
+        all: revert;
+        padding: 0;
+    }
+
+    header nav ul li {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        border: none;
+        position: unset;
+        background-color: #ffffff;
+        grid-column: 1 / 3;
+        display: inline-block;
+        padding: 20px 40px;
+        margin-right: 10px;
+    }
+
+    header nav ul li a {
+        padding: 0px;
+    }
+
+    header > a {
+        display: none;
+    }
+
+    header > h1 {
+        padding: 0px;
+        grid-column: 2 / 3;
+        grid-row: 1 / 1;
+    }
+
+    header > p {
+        padding: 0px;
+        font-size: 18px;
+    }
+
+    /* Article Section / Main Section */
+    article {
+        padding: 0px 40px 40px 40px;
+    }
+
+    article h2 {
+        padding: 20px 40px;
+    }
+
+    article .image1, article .image2 {
+        width: 385px;
+    }
+
+    article .image1 {
+        padding-right: 10px;
+        padding-bottom: 25px;
+    }
+
+    article .image2 {
+        padding-left: 15px;
+        padding-bottom: 25px;
+    }
+
+    article .lastIslandImage {
+        width: 799px;
+        object-fit: cover;
+    }
+
+    /* Plan Your Trip Section */
+    .planTrip {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .planTrip section {
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    .planTrip h3 {
+        grid-column: 1 / 3;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .testimonials .miranda {
+        grid-column: 1 / 2;
+    }
+
+    .testimonials .miranda, .testimonials .max, .testimonials .ines, .testimonials .carmen {
+        padding: 0px 20px 20px 20px;
+    }
+
+    /* Destination Section */
+    .destinations {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .destinations h3 {
+        grid-column: 1 / 5;
+    }
+
+    /* Contact Form Radio Buttons  -  NOT FINISHED YET need to adjust radio buttons so they are on one line*/
+    form input#fName, form input#lName, form input#email, form input#phone {
+        width: 97.5%;
+    }
+
+    /* Footer Section */
+    footer {
+        display: grid;
+        grid-template-columns: 400px 1fr 1fr;
+        grid-template-rows: 25px;
+        padding: 20px;
+    }
+
+    footer p {
+        margin-bottom: 0px;
+        height: 25px;
+    }
+
+    footer a {
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (min-width: 1250px) {
+    /* Header Section */
+    header {
+        display: grid;
+        grid-template-columns: 230px 450px 1fr;
+        padding-top: 0px;
+    }
+
+    header img {
+        grid-column: 1 / 1;
+        padding-top: 20px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    header h1 {
+        padding-top: 20px;
+    }
+
+    header nav {
+        grid-column: 3 / 4;
+        grid-row: 1 / 1;
+        padding-left: 0px;
+        padding-right: 0px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    header nav ul {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    header nav ul li {
+        display: inline-block;
+        margin-right: 0px;
+        padding: 10px;
+        right: 0;
+        top: 0;
+    }
+
+    /* Majorca Section */
+    article {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    article > h2 {
+        padding: 0px;
+    }
+
+    .majorca {
+        display: grid;
+        grid-template-columns: 560px 1fr 1fr;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .majorca h2, .majorca p {
+        padding: 0px;
+        grid-column: 1 / 1;
+    }
+    
+    .majorca h2 {
+        padding-left: 40px;
+    }
+
+    .majorca p {
+        padding-right: 20px;
+        padding-left: 40px;
+        width: 40vw;
+    }
+
+    main article > .image1 {
+        padding-right: 0;
+        padding-bottom: 0;
+        grid-column: 2 / 3;
+        width: 100px;
+    }
+
+    article > .image2 {
+        width: 100px;
+        padding-left: 0px;
+        grid-column: 2 / 3;
+    }
+
+    article > .lastIslandImage {
+        width: 200vw;
+        object-fit: cover;
+        grid-column: 2 / 4;
+    }
+
+    /* Plan you trip section */
+    .planTrip {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .planTrip h3 {
+        grid-column: 1 / 5;
+    }
+
+    .planTrip section h4 {
+        font-size: 20px;
+    }
+
+    .testimonials {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    /* Contact form */
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact p {
+        position: absolute;
+        margin-left: 250px;
+    }
+
+    .contact form input#fName, .contact form input#lName {
+        position: absolute;
+        width: 300px;
+    }
+
+    .contact form input#lName {
+        margin-top: 50px;
+    }
+
+    .contact form fieldset {
+        margin-left: 350px;
+        margin-top: -60px;
+    }
+
+    .contact form input#email {
+        position: absolute;
+        margin-left: 350px;
+        margin-top: -60px;
+        width: 300px;
+        margin-top: 140px;
+        margin-bottom: 10px;
+    }
+
+    .contact form input#phone {
+        position: absolute;
+        margin-left: 350px;
+        margin-top: 50px;
+        width: 300px;
+        margin-top: 45px;
+        margin-bottom: 10px;
+    }
+
+    .contact form label[for="email"] {
+        position: absolute;
+        margin-top: 110px;
+        margin-bottom: 10px;
+        margin-left: 350px;
+    }
+
+    .contact form label[for="phone"] {
+        position: absolute;
+        margin-bottom: 10px;
+        margin-left: 350px;
+    }
+
+    .contact form select#destination {
+        position: absolute;
+        width: 318px;
+        margin-left: 800px;
+        margin-top: -225px;
+    }
+
+    .contact form select#travelTime {
+        position: absolute;
+        width: 318px;
+        margin-left: 800px;
+        margin-top: -190px;
+    }
+
+    .contact form label[for=travelTime] {
+        position: absolute;
+        margin-top: -210px;
+        margin-left: 800px;
+    }
+
+    .contact form select#destination {
+        position: absolute;
+        width: 318px;
+        margin-left: 800px;
+        margin-top: -100px;
+    }
+
+    .contact form label[for=destination] {
+        position: absolute;
+        margin-top: -130px;
+        margin-left: 800px;
+    }
+
+    .contact form input[type="submit"] {
+        position: absolute;
+        margin-top: 220px;
+        width: 1150px;
+    }
+
+    footer {
+        position: absolute;
+        margin-top: 240px;
+        width: 100%;
+    }
+}
