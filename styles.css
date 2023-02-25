@@ -49,13 +49,13 @@ table {
 	border-spacing: 0;
 }
 
-/* Molle */
+/* Molle------------- */
 @import url('https://fonts.googleapis.com/css2?family=Molle&display=swap');
 
-/* Montserrat */
+/* Montserrat--------- */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-/* Base Styles */
+/* Header Styles--------- */
 body {
     margin: 0px;
 }
@@ -94,7 +94,8 @@ header {
     background: linear-gradient(180deg, rgba(0,212,255,1) 0%, rgba(255,255,255,1) 100%);
 }
 
-/* Mobile Device Styles - starting at 500px */
+
+/* Mobile Device Styles - starting at 500px-------------------- */
 @media screen and (min-width: 500px) {
     header {
         display: grid;
@@ -112,7 +113,7 @@ header {
         line-height: 1.5rem;
         font-size: 20px;
     }
-    
+  /*Nav----------------------*/
     nav {
         margin-top: 40px;
         grid-column: 2 / 3;
@@ -186,7 +187,7 @@ header {
         padding: 20px;
     }
     
-
+/* Nav end-------------------------*/
     article h2 {
         padding-right: 40px;
         padding-left: 40px;
@@ -446,7 +447,7 @@ header {
 
 @media screen and (min-width: 850px) {
 
-    /* Header Section */
+/* Header Section----------------*/
     header {
         display: grid;
         grid-template-columns: 230px 1fr;
@@ -512,7 +513,7 @@ header {
         font-size: 18px;
     }
 
-    /* Article Section / Main Section */
+    /* Article Section / Main Section -----------*/
     article {
         padding: 0px 40px 40px 40px;
     }
@@ -540,7 +541,7 @@ header {
         object-fit: cover;
     }
 
-    /* Plan Your Trip Section */
+    /* Plan Your Trip Section-----------*/
     .planTrip {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -648,7 +649,7 @@ header {
         top: 0;
     }
 
-    /* Majorca Section */
+    /* Majorca---------------*/
     article {
         display: flex;
         flex-direction: column;
@@ -700,7 +701,7 @@ header {
         grid-column: 2 / 4;
     }
 
-    /* Plan you trip section */
+    /* Plan you trip -------------*/
     .planTrip {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -719,7 +720,7 @@ header {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
-    /* Contact form */
+    /* Contact form---------------*/
     .contact {
         display: flex;
         flex-direction: column;
